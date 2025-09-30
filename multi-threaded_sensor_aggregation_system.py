@@ -2,7 +2,7 @@ import threading
 import time
 import random
 
-# 1.1, 1.2,  1.3 Combined
+
 class Aggregator:       
     #An aggregator that processes sensor readings with a max concurrency limit.
     def __init__(self, agg_id, capacity):
@@ -46,4 +46,5 @@ if __name__ == "__main__":
     aggregators = [Aggregator(i, capacity=2) for i in range(1, 6)]   # Create 5 aggregators with a capacity of 2 each 
     print("Starting sensor aggregation simulation...")
     sensor_simulation(50, aggregators)
+
     print("All readings processed.")
